@@ -117,13 +117,13 @@ module RTeX
     end
 
     def process!
-      unless `#{processor} --interaction=nonstopmode '#{source_file}' #{@options[:shell_redirect]}`
+      unless `#{processor} -interaction=batchmode '#{source_file}' #{@options[:shell_redirect]}`
         raise GenerationError, "Could not generate PDF using #{processor}"
       end
     end
 
     def preprocess!
-      unless `#{preprocessor} --interaction=nonstopmode '#{source_file}' #{@options[:shell_redirect]}`
+      unless `#{preprocessor} -interaction=batchmode '#{source_file}' #{@options[:shell_redirect]}`
         raise GenerationError, "Could not preprocess using #{preprocessor}"
       end
     end
