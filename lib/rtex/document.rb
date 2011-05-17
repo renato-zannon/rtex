@@ -22,9 +22,9 @@ module RTeX
     # [+:tmpdir+] Location of temporary directory (default: +Dir.tmpdir+)
     def self.options
       @options ||= {
-        :preprocessor => 'latex',
+        :preprocessor => 'xelatex',
         :preprocess => true,
-        :processor => 'pdflatex',
+        :processor => 'xelatex',
         #
         :shell_redirect => nil,
         # Temporary Directory
